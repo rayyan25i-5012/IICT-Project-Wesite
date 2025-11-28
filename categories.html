@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLog - Categories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/categories.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <section class="hero-banner rounded-3">
+            <centre><h1 class="text-white">AutoLog</h1>
+            <p class="lead text-white">Where every ride begins</p>
+            <div class="d-flex justify-content-center mt-4"></div>
+            </section>
+                <br>
+        <h1 class="mb-4 text-center" style="color:#ffffff">Categories</h1>
+        <p class="lead text-center mb-5" style="color:#444343">Browse all our auto-parts and accessories</p>
+
+    
+
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+            <button class="btn btn-danger" onclick="filterProducts('All')">All</button>
+            <button class="btn btn-outline-dark" onclick="filterProducts('Exterior')">Exterior</button>
+            <button class="btn btn-outline-dark" onclick="filterProducts('Interior')">Interior</button>
+            <button class="btn btn-outline-dark" onclick="filterProducts('Car Care')">Car Care</button>
+            <button class="btn btn-outline-dark" onclick="filterProducts('Tyres')">Tyres</button>
+            <button class="btn btn-outline-dark" onclick="filterProducts('Engine')">Engine</button>
+            <button class="btn btn-outline-dark" onclick="filterProducts('Perf.')">Perf.</button>
+            <button class="btn btn-outline-dark" onclick="filterProducts('Misc.')">Misc.</button>
+        </div>
+        
+<h3 class="mt-5 mb-3">All Products</h3>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+
+    <!-- Polish -->
+    <div class="col">
+        <div class="card1 h-100" data-category="Car Care" data-product="Polish">
+            <img src="images/polish.webp" class="card1-img-top" alt="Polish">
+            <div class="card1-body">
+                <h5 class="card1-title">Polish</h5>
+                <p class="price1">1,500 PKR</p>
+                <p class="card1-text text-muted">Car Care</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Polish')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spark Plug -->
+    <div class="col">
+        <div class="card1 h-100" data-category="Engine" data-product="Spark Plug">
+            <img src="images/spark.jpeg" class="card1-img-top" alt="Spark Plug">
+            <div class="card1-body">
+                <h5 class="card1-title">Denso Spark Plug</h5>
+                <p class="price1">3,000 PKR</p>
+                <p class="card1-text text-muted">Engine</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Denso Spark Plug')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- DashCam -->
+    <div class="col">
+        <div class="card1 h-100" data-category="Interior" data-product="Dash Cam">
+            <img src="images/dashcam.jpg" class="card1-img-top" alt="Dashcam">
+            <div class="card1-body">
+                <h5 class="card1-title">DashCam</h5>
+                <p class="price1">2,500 PKR</p>
+                <p class="card1-text text-muted">Interior</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Dashcam')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Corolla Rear Light -->
+    <div class="col">
+        <div class="card1 h-100" data-category="Exterior" data-product="Corolla Backlight">
+            <img src="images/corolla.jpg" class="card1-img-top" alt="Corolla Backlight">
+            <div class="card1-body">
+                <h5 class="card1-title">Corolla Rear Light</h5>
+                <p class="price1">30,000 PKR</p>
+                <p class="card1-text text-muted">Exterior</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Corolla Rear Light')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Civic Rebirth HeadLight -->
+    <div class="col">
+        <div class="card1 h-100" data-category="Exterior" data-product="Civic Rebirth Headlight">
+            <img src="images/light.jpg" class="card1-img-top" alt="Civic Rebirth HeadLight">
+            <div class="card1-body">
+                <h5 class="card1-title">Civic Rebirth HeadLight</h5>
+                <p class="price1">40,000 PKR</p>
+                <p class="card1-text text-muted">Exterior</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Civic Rebirth HeadLight')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GWM Haval H6 Side Mirror -->
+    <div class="col">
+        <div class="card1 h-100" data-category="Exterior" data-product="GWM Haval H6 Side Mirror">
+            <img src="images/haval.webp" class="card1-img-top" alt="GWM Haval H6 Side Mirror">
+            <div class="card1-body">
+                <h5 class="card1-title">GWM Haval H6 Side Mirror</h5>
+                <p class="price1">45,000 PKR</p>
+                <p class="card1-text text-muted">Exterior</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('GWM Haval H6 Side Mirror')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HKS Exhaust -->
+    <div class="col">
+        <div class="card1 h-100" data-category="Perf." data-product="HKS Exhaust">
+            <img src="images/exhaust.jpeg" class="card1-img-top" alt="HKS Exhaust">
+            <div class="card1-body">
+                <h5 class="card1-title">HKS Exhaust</h5>
+                <p class="price1">10,000 PKR</p>
+                <p class="card1-text text-muted">Performance</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('HKS Exhaust')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="col">
+        <div class="card1 h-100" data-category="Misc." data-product="Air Freshner">
+            <img src="images/air.jpg" class="card1-img-top" alt="Air Freshner">
+            <div class="card1-body">
+                <h5 class="card1-title">Air Freshner</h5>
+                <p class="price1">750 PKR</p>
+                <p class="card1-text text-muted">Miscellaneous</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Air Freshner')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+            <div class="col">
+        <div class="card1 h-100" data-category="Tyres" data-product="Tyre">
+            <img src="images/tyre.webp" class="card1-img-top" alt="Tyre">
+            <div class="card1-body">
+                <h5 class="card1-title">Continental 205/45/18</h5>
+                <p class="price1">28,000 PKR</p>
+                <p class="card1-text text-muted">Tyre</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Continental 205/45/18')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+             <div class="col">
+        <div class="card1 h-100" data-category="Interior" data-product="Screen">
+            <img src="images/screen.jpg" class="card1-img-top" alt="Screen">
+            <div class="card1-body">
+                <h5 class="card1-title">Android Screen 10-inch</h5>
+                <p class="price1">17,000 PKR</p>
+                <p class="card1-text text-muted">Interior</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Android Screen 10-inch')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+                 <div class="col">
+        <div class="card1 h-100" data-category="Engine" data-product="Ait Filter">
+            <img src="images/filter.webp" class="card1-img-top" alt="Air Filter">
+            <div class="card1-body">
+                <h5 class="card1-title">Air Filter for Civic</h5>
+                <p class="price1">1500 PKR</p>
+                <p class="card1-text text-muted">Engine</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Air Filter for Civic')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+                     <div class="col">
+        <div class="card1 h-100" data-category="Misc." data-product="Shades">
+            <img src="images/shades.jpg" class="card1-img-top" alt="Shades">
+            <div class="card1-body">
+                <h5 class="card1-title">Sun Shades for Corolla</h5>
+                <p class="price1">2250 PKR</p>
+                <p class="card1-text text-muted">Miscellaneous</p>
+                <button class="btn btn-outline-dark w-100" onclick="addToCart('Sun Shades for Corolla')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- End of row -->
+
+
+
+        <div class="text-center mt-5">
+            <a href="cart.html" class="btn btn-lg btn-warning">Go to Cart</a>
+        </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+     <script>
+        // Simple client-side include for header and footer
+        fetch('header.html').then(response => response.text()).then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+        fetch('footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+    <script>
+const prices = {
+    "Polish": 1500,
+    "Denso Spark Plug": 3000,
+    "DashCam": 2500,
+    "Corolla Rear Light": 30000,
+    "Civic Rebirth Headlight": 40000,
+    "GWM Haval H6 Side Mirror": 45000,
+    "HKS Exhaust": 10000,
+    "Air Freshner": 750,
+    "Continental 205/45/18": 28000,
+    "Android Screen 10-inch": 17000,
+    "Air Filter for Civic": 1500,
+    "Sun Shades for Corolla": 2250,
+    "Car Wax": 1500,
+    "Steering Covers": 2250,
+    "Civic Reborn Sidemirrors": 5000,
+    "Corolla Steering": 25000
+};
+
+function addToCart(productName) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Get product price from prices object
+    const price = prices[productName] || 0;
+
+    // Check if item already exists
+    let existing = cart.find(item => item.name === productName);
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({ name: productName, quantity: 1, price: price });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(productName + " added to cart!");
+}
+
+    </script>
+</body>
+</html>

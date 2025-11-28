@@ -1,0 +1,12 @@
+.nav-link {
+  padding: 15px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+  cursor:pointer;
+}
+
+.nav-link:hover {
+  transform: translateY(-3px);
+}

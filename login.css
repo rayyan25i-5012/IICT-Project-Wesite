@@ -1,0 +1,47 @@
+/* ===== Body ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #494747 !important; /* dark gray background */
+    background: url('../images/rolls.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    color: #f4f4f4; /* light text for contrast */
+    margin: 0;
+    padding: 0;
+}
+/* ===== Transparent Card ===== */
+.card1 {
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent */
+    padding: 5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    color: #fff;
+
+    width: 500px;  /* make it wider */
+    padding-top: 1.5rem;  /* reduce vertical padding */
+    padding-bottom: 1.5rem; /* reduce vertical padding */
+}
+.page-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 600px;
+}
+
+/* ===== Links ===== */
+a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #dc3545;
+}
+
+/* ===== Headings ===== */
+h1 {
+    font-family: 'Garamond', serif;
+}
+

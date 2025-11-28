@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #8a8484 !important; /* dark gray background */
+    margin: 0;
+    color: #fff;
+}
+.hero-banner {
+    background: url('../images/rolls.jpg') no-repeat center center;
+    background-size: cover;
+    margin-top: 24px;
+    border-radius: 15px;
+    color: #f8f9fa;
+    padding: 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* overlay opacity */
+    z-index: 1;
+}
+.hero-banner > * {
+  position: relative; /* creates a stacking context for content */
+  z-index: 1;         /* content sits above overlay */
+}
+
+.hero-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    font-weight: 300;
+}
+.page-center {            /* new class name */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;      /* min-height safer than height */
+}
+/* ===== Product Card Styling ===== */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding: 20px;          
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    padding: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #dc3545; /* price emphasis */
+}
+.btn-warning:hover {
+    background-color: #e0a800; /* darker yellow */
+    transform: translateY(-3px);
+}
+

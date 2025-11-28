@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLog - Top Sellers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/topseller.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main class="container">
+        <section class="hero-banner rounded-3">
+            <centre><h1 class="text-white">AutoLog</h1>
+            <p class="lead text-white">Where every ride begins</p>
+            <div class="d-flex justify-content-center mt-4"></section>
+
+                <br>
+    <main class="container">
+        <h1 class="mb-4 text-center">🏆 Top Sellers</h1>
+        <p class="lead text-center mb-5">Discover our most popular products loved by thousands of Drivers</p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/mirror.jpg" class="card-img-top" alt="Sidemirrors">
+                    <div class="card-body">
+                        <h5 class="card-title">Civic Reborn Sidemirrors</h5>
+                        <p class="card-text">A sleek, popular upgrade for your vehicle's exterior.</p>
+                        <p class="price">5,000 PKR</p>
+                        <button class="btn btn-outline-dark w-100" onclick="addToCart('Civic Reborn Sidemirrors')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/cover.jpg" class="card-img-top" alt="Steering Covers">
+                    <div class="card-body">
+                        <h5 class="card-title">Steering Covers</h5>
+                        <p class="card-text">Comfortable and stylish covers for an enhanced grip.</p>
+                        <p class="price">2,250 PKR</p>
+                        <button class="btn btn-outline-dark w-100" onclick="addToCart('Steering Covers')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/wax.webp" class="card-img-top" alt="Car Wax">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Wax (Formula 1)</h5>
+                        <p class="card-text">Our best-selling car wax for ultimate shine and protection.</p>
+                        <p class="price">1,500 PKR</p>
+                        <button class="btn btn-outline-dark w-100" onclick="addToCart('Car Wax')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="cart.html" class="btn btn-lg btn-warning">Go to Cart</a>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        fetch('header.html').then(response => response.text()).then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+        fetch('footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+    <script>
+        // ---------------------- SEARCH FUNCTIONALITY ----------------------
+
+// List of all valid products (same names as your homepage)
+const productsList = [
+    "Dash Cam",
+    "Civic Rebirth Headlight",
+    "Corolla Steering",
+    "Exterior Polish"
+];
+
+// Trigger search when Search button is clicked
+document.addEventListener("DOMContentLoaded", () => {
+    const searchBtn = document.querySelector(".btn.btn-danger");
+    const searchInput = document.querySelector(".form-control");
+
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener("click", () => {
+            handleSearch(searchInput.value.trim());
+        });
+
+        // Press Enter to search
+        searchInput.addEventListener("keyup", (e) => {
+            if (e.key === "Enter") handleSearch(searchInput.value.trim());
+        });
+    }
+});
+
+function handleSearch(query) {
+    if (!query) return;
+
+    // Check if product exists
+    const match = productsList.find(
+        p => p.toLowerCase() === query.toLowerCase()
+    );
+
+    if (match) {
+        // Save the search query so category page can highlight it
+        localStorage.setItem("searchQuery", match);
+        window.location.href = "categories.html"; // Your categories page
+    } else {
+        alert("Product not found!");
+    }
+}
+    </script>
+     <script>
+const prices = {
+    "Polish": 1500,
+    "Denso Spark Plug": 3000,
+    "DashCam": 2500,
+    "Corolla Rear Light": 30000,
+    "Civic Rebirth Headlight": 40000,
+    "GWM Haval H6 Side Mirror": 45000,
+    "HKS Exhaust": 10000,
+    "Air Freshner": 750,
+    "Continental 205/45/18": 28000,
+    "Android Screen 10-inch": 17000,
+    "Air Filter for Civic": 1500,
+    "Sun Shades for Corolla": 2250,
+    "Car Wax": 1500,
+    "Steering Covers": 2250,
+    "Civic Reborn Sidemirrors": 5000,
+    "Corolla Steering": 25000
+};
+
+function addToCart(productName) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    // Check if item already exists
+    let existing = cart.find(item => item.name === productName);
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({ name: productName, quantity: 1, price: prices[productName] });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(productName + " added to cart!");
+}
+
+    </script>
+</body>
+</html>
