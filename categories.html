@@ -242,8 +242,9 @@ function addToCart(productName) {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(productName + " added to cart!");
-    function filterProducts(category) {
+    alert(productName + " added to cart!");}
+        
+function filterProducts(category) {
     const cards = document.querySelectorAll(".card1");
 
     cards.forEach(card => {
@@ -271,8 +272,8 @@ function addToCart(productName) {
         activeBtn.classList.add("btn-danger");
     }
 }
-
     </script>
 </body>
 </html>
+
 
