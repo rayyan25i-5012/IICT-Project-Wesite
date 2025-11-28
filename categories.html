@@ -243,8 +243,36 @@ function addToCart(productName) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
     alert(productName + " added to cart!");
+    function filterProducts(category) {
+    const cards = document.querySelectorAll(".card1");
+
+    cards.forEach(card => {
+        const cardCategory = card.getAttribute("data-category");
+
+        // Show all if 'All' selected
+        if (category === "All" || cardCategory === category) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    // Highlight active button
+    const buttons = document.querySelectorAll("button.btn");
+    buttons.forEach(btn => btn.classList.remove("btn-danger"));
+    buttons.forEach(btn => btn.classList.add("btn-outline-dark"));
+
+    const activeBtn = Array.from(buttons).find(b => 
+        b.getAttribute("onclick") === `filterProducts('${category}')`
+    );
+
+    if (activeBtn) {
+        activeBtn.classList.remove("btn-outline-dark");
+        activeBtn.classList.add("btn-danger");
+    }
 }
 
     </script>
 </body>
 </html>
+
